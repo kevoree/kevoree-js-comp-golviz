@@ -34,3 +34,4 @@ node_modules
 kevlib.json
 
 browser/*.js
+!browser/canvas.js
