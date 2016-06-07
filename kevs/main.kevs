@@ -1,7 +1,6 @@
 add browser, node0 : JavascriptNode/5.3.3
 add browser.comp : GolViz/1.0.0
-add sync : RemoteWSGroup/5.3.1
+add sync : WSGroup
 attach node0, browser sync
 set browser.logLevel = 'DEBUG'
-set sync.host = 'ws.kevoree.org'
-set sync.path = 'golviz'
+set sync.master = 'node0'
