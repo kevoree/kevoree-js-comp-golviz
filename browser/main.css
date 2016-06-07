@@ -1,0 +1,11 @@
+.alive {
+    fill: #B3210B;
+    stroke-width: 1px;
+    stroke: #666;
+}
+
+.dead {
+    fill: #000;
+    stroke-width: 1px;
+    stroke: #666;
+}
