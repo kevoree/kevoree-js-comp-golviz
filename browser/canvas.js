@@ -1,7 +1,6 @@
 angular.module('canvas', [])
   .factory('initCanvas', function () {
     return function () {
-      console.log("azertyuazertyuazertyuazertyuazertyu");
       function getSquareSize() {
           var w = window,
               d = document,
@@ -20,7 +19,14 @@ angular.module('canvas', [])
 
       var squareSize = getSquareSize() * 0.9;
 
-      return function updateGrid(map) {
+      return function updateGrid(pMap) {
+
+          var map = _.map(pMap, function(e) {
+              var ret = _.clone(e);
+              ret["x"] = parseInt(ret["x"], 10);
+              ret["y"] = parseInt(ret["y"], 10);
+              return ret;
+          });
         var xmap = _.map(map, function(e) { return e.x; });
         var ymap = _.map(map, function(e) { return e.y; });
         var xmin = _.min(xmap);

@@ -1,6 +1,16 @@
-add browser, node0 : JavascriptNode/5.3.3
-add browser.comp : GolViz/1.0.0
+add node0, browser : JavascriptNode
+add node1 : JavaNode
+add browser.comp : GolViz
+//add node1.c11, node1.c33, node1.c22 : GameOfLifeCell
 add sync : WSGroup
-attach node0, browser sync
+
+attach browser, node0, node1 sync
+
 set browser.logLevel = 'DEBUG'
+//set node1.c11.y = '1'
+//set node1.c11.x = '1'
+//set node1.c33.y = '3'
+//set node1.c33.x = '3'
+//set node1.c22.y = '2'
+//set node1.c22.x = '2'
 set sync.master = 'node0'
